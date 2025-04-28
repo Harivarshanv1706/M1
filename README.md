@@ -10,9 +10,24 @@ Write a C program to read 3 characters one by one and print the characters in a 
 4.	End the program.
 
 ## PROGRAM:
-
+```
+#include <stdio.h>
+int main()
+{
+    char ch1, ch2, ch3;
+    printf("Enter first character: ");
+    scanf(" %c", &ch1);
+    printf("Enter second character: ");
+    scanf(" %c", &ch2);
+    printf("Enter third character: ");
+    scanf(" %c", &ch3);
+    printf("Characters in reverse order: %c %c %c\n", ch3, ch2, ch1);
+    return 0;
+}
+```
 ## OUTPUT:
 
+![Screenshot 2025-04-28 135656](https://github.com/user-attachments/assets/98497dfe-cddd-4334-8f0f-88533ea833a9)
 
 
 
@@ -46,17 +61,27 @@ Write a C program to read A values and check whether A is positive number or not
 6.End the program.
 
 # PROGRAM:
-
+```
+#include <stdio.h>
+int main() 
+{
+    int A;
+    printf("Enter a value: ");
+    scanf("%d", &A);
+    if (A > 0)
+    {
+        printf("%d is a positive number.\n", A);
+    }
+    else 
+    {
+        printf("%d is not a positive number.\n", A);
+    }
+    return 0;
+}
+```
 # OUTPUT:
 
-
-
-
-
-
-
-
-
+![Screenshot 2025-04-28 135911](https://github.com/user-attachments/assets/53645933-3fe0-496d-903f-7ac8bcbb7b5f)
 
 
 # RESULT:
@@ -80,16 +105,28 @@ Write a program to find minimum between two fraction numbers using conditional o
 7.	Print the minimum value.
 
 ## PROGRAM:
+```
+#include <stdio.h>
+int main() 
+{
+    int num1, den1, num2, den2;
+    float frac1, frac2, min;
+    printf("Enter numerator and denominator of first fraction: ");
+    scanf("%d%d", &num1, &den1);
+    printf("Enter numerator and denominator of second fraction: ");
+    scanf("%d%d", &num2, &den2);
+    frac1 = (float)num1 / den1;
+    frac2 = (float)num2 / den2;
+    min = (frac1 < frac2) ? frac1 : frac2;
+    printf("Minimum value between the two fractions is: %.2f\n", min);
+    return 0;
+```
+
 
 ## OUTPUT:
 
 
-
-
-
-
-
-
+![Screenshot 2025-04-28 140157](https://github.com/user-attachments/assets/0a2d82b1-7ef6-4f4b-b077-93ee6238bd9b)
 
 ## RESULT:
 Thus the program to find minimum between two fraction numbers using conditional operator or ternary operator has been executed successfully.
@@ -112,14 +149,34 @@ Write a C program to check whether the input value is equal to 1 using simple if
 
 ## PROGRAM:
 
+```
+#include <stdio.h>
+
+int main() {
+    int value;
+    printf("Enter a value: ");
+    scanf("%d", &value);
+    
+    if (value == 1) {
+        printf("The input value is equal to 1.\n");
+    } else {
+        printf("The input value is not equal to 1.\n");
+    }
+    
+    return 0;
+}
+```
+
 ## OUTPUT:
 
 
+![Screenshot 2025-04-28 140338](https://github.com/user-attachments/assets/39dac763-198d-44b3-9ccb-bdd58590e0b7)
 
 
 
 
 
+![Screenshot 2025-04-28 140424](https://github.com/user-attachments/assets/041dce8c-02e0-4dd5-afd4-4e9c1afd40c3)
 
 
 	
@@ -147,8 +204,47 @@ c.	Else if percentage >= 36: Print “Division = Pass”
 9.	Else: Print “Division = Fail”
 10.	End
 ## PROGRAM:
+```
+#include <stdio.h>
+int main()
+{
+    int m1, m2, m3;
+    float tot, per;
+    printf("Enter marks of three subjects: ");
+    scanf("%d%d%d", &m1, &m2, &m3);
+    tot = m1 + m2 + m3;
+    per = tot / 3;
+    printf("Total Marks = %.2f\n", tot);
+    printf("Percentage = %.2f\n", per);
+    if (m1 >= 40 && m2 >= 40 && m3 >= 40)
+    {
+        if (per >= 60)
+	{
+            printf("Division = First\n");
+        }
+	else if (per >= 48)
+	{
+            printf("Division = Second\n");
+        } 
+	else if (per >= 36) 
+	{
+            printf("Division = Pass\n");
+        }
+    } 
+    else
+    {
+        printf("Division = Fail\n");
+    }
+    
+    return 0;
+}
+```
 
 ## OUTPUT:
+![Screenshot 2025-04-28 140546](https://github.com/user-attachments/assets/a4075e88-e73d-4f59-952a-5032f48b920b)
+
+![Screenshot 2025-04-28 140701](https://github.com/user-attachments/assets/e9f78d18-413f-4656-982f-74797cda8c8e)
+
 
 ## RESULT:
 The program successfully takes three subject marks, calculates the total and percentage, and correctly determines the division based on predefined grading logic.
